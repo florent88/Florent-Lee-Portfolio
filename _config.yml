@@ -1,0 +1,4 @@
+title: "My Portfolio"
+description: "A showcase of my work and skills."
+baseurl: "index.html" # the subpath of your site, e.g., /portfolio
+url: "https://florent88.github.io/Florent-Lee-Portfolio/"
