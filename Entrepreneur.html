@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+	<title>Purdue's Data4Good Case Competition</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">FLORENT LEE</a>
+		</header>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="links">
+				<li class="active"><a href="index.html">Academic Achievements</a></li>
+				<li><a href="generic.html">About Me</a></li>
+				<li><a href="elements.html">Education and Work Experience</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Post -->
+			<section class="post">
+				<header class="major">
+					<span class="date">November 11, 2024</span>
+					<h1>
+						Purdue's Data4Good<br />
+						Case Competition
+					</h1>
+					<p>
+						The story of achieving the number one spot on the Kaggle leaderboard<br />
+						in a competition to aid survivors during a period of grief.<br />
+					</p>
+				</header>
+
+				<div class="image main"><img src="images/TAPS.jpg" alt="TAPS Competition" /></div>
+
+				<!-- Problem Section -->
+				<h2>Problem</h2>
+				<p>
+					The Tragedy Assistance Program for Survivors (TAPS) is dedicated to providing comfort and support to families who have lost loved ones in military service. As part of their mission, TAPS has developed a "survivor journey map" to guide their staff in caring for bereaved families and to help survivors navigate their grief journey. However, the current process of creating and updating this map is labor-intensive and limits TAPS' ability to use the map in quickly connecting survivors with the most relevant care.
+				</p>
+
+				<div class="image main"><img src="images/problem.jpg" alt="Problem Illustration" /></div>
+
+				<!-- Goal/Key Metrics -->
+				<h2>Goal/Key Metrics</h2>
+				<p>
+					In this Kaggle portion of the Data4Good case competition, you'll tackle the problem of "Automated Journey Mapping". That is, you will develop an AI-powered solution to automatically map survivor survey responses to appropriate stages (or "epochs") within the TAPS survivor journey map. This will enable TAPS to quickly and accurately connect survivors with the most relevant resources and support.
+				</p>
+				<p>
+					With only 50 sample surveys and results, the goal is to attribute 2950 non-labeled survey responses to a stage in the journey map:
+					<ul>
+						<li>"Immediate Grief, Shock & Emotion"</li>
+						<li>"Navigating Family Relationships"</li>
+						<li>"Learning to Process Grief"</li>
+						<li>"Moments That Matter"</li>
+						<li>"Feeling Immersed, Connected & Seen"</li>
+						<li>"New Growth & Purpose"</li>
+					</ul>
+				</p>
+
+				<div class="image main"><img src="images/goals.jpg" alt="Goals Illustration" /></div>
+
+				<!-- Actions Section -->
+				<h2>Actions</h2>
+				<p>
+					Originally, the organizers wanted to use LLMs to “read” the survey responses and give the grief stage. My team and I went through multiple iterations such as prompt engineering, chain prompting, and creating AI agents. The original API key given to access LLMs did not allow training AI agents, which quickly proved ineffective as soon as the survey responses were looped. Labels were biased toward stages 3 and 5, resulting in an F1 score of 6%.
+				</p>
+				<p>
+					Changing the prompt multiple times and implementing chain prompting using different models increased the score to 46%. However, this was still unsatisfactory. We trained an agent using Mistral AI and the example results from the 50-line dataset, reaching a score of 76.7%.
+				</p>
+
+				<div class="image main"><img src="images/iterations.jpg" alt="Iterations" /></div>
+
+				<p>
+					We returned to the PredictionGuard API key and explored multiple LLMs. A hybrid method was developed: one LLM summarized survey responses using Llama 3.2, while three other models used this summary along with the labeled dataset. Despite this, the score peaked at 67.7%.
+				</p>
+				<p>
+					Shifting to regression models yielded an F1 score of 80.7%. We manually added training rows from Mistral AI’s submissions and utilized open-ended question data, boosting the score to 89%. By refining data through translation, vectorization, and disagreement analysis between logistic regression and random forest models, we achieved 96.1%, securing first place by a significant margin.
+				</p>
+
+				<div class="image main"><img src="images/results.jpg" alt="Results Chart" /></div>
+			</section>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</div>
+</body>
+</html>

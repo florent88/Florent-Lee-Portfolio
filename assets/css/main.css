@@ -45,6 +45,22 @@ blockquote, q {
 		content: '';
 		content: none;
 	}
+.hover-video {
+	width: 100%; /* Adjust width to fit your design */
+	height: auto; /* Maintain aspect ratio */
+	display: block;
+	object-fit: cover; /* Ensures the video fills its container */
+}
+
+.hover-video:hover {
+	/* Play the video when hovered */
+	animation-play-state: running;
+}
+
+.hover-video:not(:hover) {
+	/* Pause the video when not hovered */
+	animation-play-state: paused;
+}
 
 table {
 	border-collapse: collapse;
