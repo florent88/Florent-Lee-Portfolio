@@ -6,7 +6,7 @@
 -->
 <html>
 <head>
-	<title>Purdue's Data4Good Case Competition</title>
+	<title>OutFitMe</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -37,65 +37,45 @@
 			<!-- Post -->
 			<section class="post">
 				<header class="major">
-					<span class="date">November 11, 2024</span>
+					<span class="date">February 16, 2023</span>
 					<h1>
-						Purdue's Data4Good<br />
-						Case Competition
+						OutFitMe </br>
+						A school project
 					</h1>
 					<p>
-						The story of achieving the number one spot on the Kaggle leaderboard<br />
-						in a competition to aid survivors during a period of grief.<br />
+						Utilizing good teamwork and leadership to get back on track<br />
+						for a school project which almost turned badly<br />
 					</p>
 				</header>
 
-				<div class="image main"><img src="images/TAPS.jpg" alt="TAPS Competition" /></div>
+				<iframe src="https://3dwarehouse.sketchup.com/embed/d6db2778-52ce-459d-885d-f8791dd4b7b3?token=fuBSJQEPgRY=&binaryName=s22" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="580" height="326" allowfullscreen></iframe>
 
 				<!-- Problem Section -->
 				<h2>Problem</h2>
 				<p>
-					The Tragedy Assistance Program for Survivors (TAPS) is dedicated to providing comfort and support to families who have lost loved ones in military service. As part of their mission, TAPS has developed a "survivor journey map" to guide their staff in caring for bereaved families and to help survivors navigate their grief journey. However, the current process of creating and updating this map is labor-intensive and limits TAPS' ability to use the map in quickly connecting survivors with the most relevant care.
+					Once the project was assigned, the next three weeks became extremely busy for us due to overlapping exams. As double diploma students, our schedules were much more demanding compared to our classmates, whose exams were scheduled later. Unfortunately, this created significant disruptions in our ability to manage the project efficiently, making it particularly challenging to stay on track and complete it on time.
 				</p>
 
-				<div class="image main"><img src="images/problem.jpg" alt="Problem Illustration" /></div>
+				<div class="image main"><img src="images/croquis.jpg" alt="Our first croquis" /></div>
+
 
 				<!-- Goal/Key Metrics -->
 				<h2>Goal/Key Metrics</h2>
 				<p>
-					In this Kaggle portion of the Data4Good case competition, you'll tackle the problem of "Automated Journey Mapping". That is, you will develop an AI-powered solution to automatically map survivor survey responses to appropriate stages (or "epochs") within the TAPS survivor journey map. This will enable TAPS to quickly and accurately connect survivors with the most relevant resources and support.
-				</p>
-				<p>
-					With only 50 sample surveys and results, the goal is to attribute 2950 non-labeled survey responses to a stage in the journey map:
-					<ul>
-						<li>"Immediate Grief, Shock & Emotion"</li>
-						<li>"Navigating Family Relationships"</li>
-						<li>"Learning to Process Grief"</li>
-						<li>"Moments That Matter"</li>
-						<li>"Feeling Immersed, Connected & Seen"</li>
-						<li>"New Growth & Purpose"</li>
-					</ul>
+					The project accounted for half of the course’s total grade, making it critical for us to achieve the highest possible score. Our objectives included delivering a polished and professional presentation, meeting the professor’s expectations, and, as a personal goal, impressing our classmates with the quality of our work.
 				</p>
 
-				<div class="image main"><img src="images/goals.jpg" alt="Goals Illustration" /></div>
+				<div class="image main"><img src="images/BusinessModel.png" alt="Our Business Model" /></div>
 
 				<!-- Actions Section -->
 				<h2>Actions</h2>
 				<p>
-					Originally, the organizers wanted to use LLMs to “read” the survey responses and give the grief stage. My team and I went through multiple iterations such as prompt engineering, chain prompting, and creating AI agents. The original API key given to access LLMs did not allow training AI agents, which quickly proved ineffective as soon as the survey responses were looped. Labels were biased toward stages 3 and 5, resulting in an F1 score of 6%.
+					After a week of little progress, I took the initiative to schedule a meeting with my teammates. During the meeting, we collectively decided on a product or service to present, ensuring that everyone was on board with the idea. I then outlined the key steps needed for the presentation and divided the workload into equal parts for maximum efficiency. To ensure fairness and satisfaction, we held a vote on who would handle each section, allowing everyone to choose a role they felt comfortable with. This approach allowed each teammate to work at their own pace, avoiding the need for frequent meetings or other potentially time-consuming activities during a hectic exam period.
 				</p>
 				<p>
-					Changing the prompt multiple times and implementing chain prompting using different models increased the score to 46%. However, this was still unsatisfactory. We trained an agent using Mistral AI and the example results from the 50-line dataset, reaching a score of 76.7%.
+					As the project neared completion, only the PowerPoint presentation remained. However, with more exams looming, it became difficult to divide this task among the team. Since I was already ahead in both grades and my exam preparations, I volunteered to take on the task myself. I created a PowerPoint presentation that my teammates and I were proud of, and we all felt it represented our work excellently.
 				</p>
 
-				<div class="image main"><img src="images/iterations.jpg" alt="Iterations" /></div>
-
-				<p>
-					We returned to the PredictionGuard API key and explored multiple LLMs. A hybrid method was developed: one LLM summarized survey responses using Llama 3.2, while three other models used this summary along with the labeled dataset. Despite this, the score peaked at 67.7%.
-				</p>
-				<p>
-					Shifting to regression models yielded an F1 score of 80.7%. We manually added training rows from Mistral AI’s submissions and utilized open-ended question data, boosting the score to 89%. By refining data through translation, vectorization, and disagreement analysis between logistic regression and random forest models, we achieved 96.1%, securing first place by a significant margin.
-				</p>
-
-				<div class="image main"><img src="images/results.jpg" alt="Results Chart" /></div>
 			</section>
 
 		</div>
