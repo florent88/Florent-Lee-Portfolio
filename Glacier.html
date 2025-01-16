@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<!--
+    Massively by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>Glacier Melting and Greenhouse Gas Emissions</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">FLORENT LEE</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="index.html">Academic Achievements</a></li>
+                <li><a href="generic.html">About Me</a></li>
+                <li><a href="elements.html">Education and Work Experience</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <span class="date">March 7, 2024</span>
+                    <h1>
+                        Glacier Melting and<br />
+                        Greenhouse Gas Emissions
+                    </h1>
+                    <p>
+                        Exploring the link between greenhouse gas emissions and glacier melting through advanced data analysis and modeling.<br />
+                    </p>
+                </header>
+
+                <div class="image main"><img src="images/Before_After.jpg" alt="Glacier Melting" /></div>
+
+                <!-- Problem Section -->
+                <h2>Problem</h2>
+                <p>
+                    Global warming has accelerated glacier melting at alarming rates, with dire consequences for sea levels, ecosystems, and human populations. Understanding the relationship between greenhouse gas (GHG) emissions and glacier melting is critical for informed policy-making and mitigation strategies. Our project aimed to uncover these relationships and provide actionable insights.
+                </p>
+
+                <div class="image main"><img src="images/GlacierAreas.ong" alt="Areas observed" /></div>
+
+                <!-- Data Sources Section -->
+                <h2>Data Sources</h2>
+                <p>
+                    We utilized two primary datasets:
+                    <ul>
+                        <li><strong>Greenhouse Gas Emissions:</strong> EDGAR database, detailing annual emissions of CO2, CH4, N2O, and fluorinated gases (in million tons CO2-equivalent).</li>
+                        <li><strong>Glacier Metrics:</strong> WGMS database, providing annual glacier mass balance, latitude, longitude, elevation, and other critical metrics.</li>
+                    </ul>
+                </p>
+
+
+                <!-- Goal/Key Metrics -->
+                <h2>Goal/Key Metrics</h2>
+                <p>
+                    Our objective was to analyze the correlation between regional GHG emissions and glacier melting trends. Key deliverables included:
+                    <ul>
+                        <li>Determining statistical relationships at regional levels.</li>
+                        <li>Applying Principal Component Analysis (PCA) for clustering regional glacier trends.</li>
+                        <li>Generating actionable insights for mitigating glacier melting.</li>
+                    </ul>
+                </p>
+
+                <div class="image main"><img src="images/Meltingovertheyears.png" alt="Goals Illustration" /></div>
+
+                <!-- Actions Section -->
+                <h2>Actions</h2>
+                <p>
+                    Our analysis involved multiple stages:
+                    <ul>
+                        <li><strong>Data Cleaning:</strong> Addressing missing values and aligning datasets by region and year.</li>
+                        <li><strong>Exploratory Analysis:</strong> Visualizing trends in GHG emissions and glacier mass balance for regions like the Alps and the Andes.</li>
+                        <li><strong>Correlation Analysis:</strong> Computing Pearson coefficients to identify significant relationships.</li>
+                        <li><strong>PCA and Clustering:</strong> Reducing dimensionality and clustering regions based on geographic and glacier metrics.</li>
+                    </ul>
+                </p>
+
+                <div class="image main"><img src="images/PCA.png" alt="Actions Taken" /></div>
+
+                <!-- Results Section -->
+                <h2>Results</h2>
+                <p>
+                    Our analysis revealed:
+                    <ul>
+                        <li>Not much correlation between CO2 emissions and glacier melting in high-latitude regions.</li>
+                        <li>Distinct clustering of regions based on elevation and latitude using PCA.</li>
+                        <li>Insights into anomalous trends, such as reduced CO2 emissions in the Caucasus after a major earthquake.</li>
+                    </ul>
+                </p>
+
+                <div class="image main"><img src="images/Regressionresults.png" alt="Results Table" /></div>
+
+                <!-- Insights Section -->
+                <h2>Insights and Next Steps</h2>
+                <p>
+                    The project began with significant challenges in finding and preparing suitable datasets. Many glaciers lacked older data, making it difficult to observe meaningful trends over time. Most datasets were heavily focused on glaciers in Switzerland and the United States. To include more diverse regions, I manually consolidated data from over twenty files containing individual glacier records to streamline analysis. Additionally, our initial dataset for greenhouse gas emissions had many gaps for specific countries, forcing us to switch to a more comprehensive source.
+                </p>
+                <p>
+                    Within our team, differences in data organization—some indexing by year while others used a column-based approach—complicated integrating regional data. Despite these challenges, it was fascinating to connect glacier melting to human activities, such as the significant drop in CO2 levels in the Caucasus following the 1988 Armenian earthquake.
+                </p>
+                <p>
+                    Personally, my inspiration for the project came from a trip to the Mont Blanc Glacier, where I learned how pollution trapped in the Chamonix valley accelerates glacier melting. This connection to where I used to live in the Jura region further fueled my interest in understanding these impacts on a global scale.
+                </p>
+                <p>
+                    Future steps could include analyzing the environmental impacts of glacier melt, such as the release of massive quantities of bacteria into freshwater ecosystems, as highlighted by studies like “Vast mass of microbes being released by melting glaciers” (The Guardian). We could also examine feedback loops and the resulting rise in sea levels to expand the scope of this work further.
+                </p>
+
+            </section>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </div>
+</body>
+</html>
