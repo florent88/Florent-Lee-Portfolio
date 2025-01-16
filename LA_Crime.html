@@ -6,7 +6,7 @@
 -->
 <html>
 <head>
-    <title>Purdue's Data4Good Case Competition</title>
+    <title>LA Crime Analysis Project</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -37,65 +37,112 @@
             <!-- Post -->
             <section class="post">
                 <header class="major">
-                    <span class="date">November 11, 2024</span>
+                    <span class="date">July 30, 2024</span>
                     <h1>
-                        Purdue's Data4Good<br />
-                        Case Competition
+                        Los Angeles Crime Analysis<br />
+                        2020-2024
                     </h1>
                     <p>
-                        The story of achieving the number one spot on the Kaggle leaderboard<br />
-                        in a competition to aid survivors during a period of grief.<br />
+                        A comprehensive analysis of crime patterns in LA County,<br />
+                        examining nearly one million crime records to derive actionable insights.
                     </p>
                 </header>
 
-                <div class="image main"><img src="images/TAPS.jpg" alt="TAPS Competition" /></div>
+                <div class="image main"><img src="images/Cityscape.jpg" alt="LA Cityscape" /></div>
 
-                <!-- Problem Section -->
-                <h2>Problem</h2>
+                <!-- Team Section -->
+                <h2>Meet the Team</h2>
+                <p>Our diverse team brings together expertise from various domains to provide comprehensive insights:</p>
+                <ul>
+                    <li>Sophie Rockne - Financial Analyst</li>
+                    <li>Florent Lee - Data Engineer</li>
+                    <li>Rohan Soni - Business Intelligence Engineer</li>
+                    <li>Rahul Khandelwal - Business Analyst</li>
+                    <li>Vivian Lin - Product Manager</li>
+                </ul>
+
+                <!-- Dataset Section -->
+                <h2>Dataset Overview</h2>
                 <p>
-                    The Tragedy Assistance Program for Survivors (TAPS) is dedicated to providing comfort and support to families who have lost loved ones in military service. As part of their mission, TAPS has developed a "survivor journey map" to guide their staff in caring for bereaved families and to help survivors navigate their grief journey. However, the current process of creating and updating this map is labor-intensive and limits TAPS' ability to use the map in quickly connecting survivors with the most relevant care.
+                    Our analysis encompasses a comprehensive dataset of 959,000 crime records from LA County between 2020-2024. The dataset includes detailed information about area names, district codes, crime dates, descriptions, and victim information. Through effective data cleansing, we ensured the accuracy and reliability of our insights.
                 </p>
 
-                <div class="image main"><img src="images/problem.jpg" alt="Problem Illustration" /></div>
+                <div class="image main"><img src="images/Cleansing.png" alt="Data Cleansing Process" /></div>
 
-                <!-- Goal/Key Metrics -->
-                <h2>Goal/Key Metrics</h2>
-                <p>
-                    In this Kaggle portion of the Data4Good case competition, you'll tackle the problem of "Automated Journey Mapping". That is, you will develop an AI-powered solution to automatically map survivor survey responses to appropriate stages (or "epochs") within the TAPS survivor journey map. This will enable TAPS to quickly and accurately connect survivors with the most relevant resources and support.
-                </p>
-                <p>
-                    With only 50 sample surveys and results, the goal is to attribute 2950 non-labeled survey responses to a stage in the journey map:
-                    <ul>
-                        <li>"Immediate Grief, Shock & Emotion"</li>
-                        <li>"Navigating Family Relationships"</li>
-                        <li>"Learning to Process Grief"</li>
-                        <li>"Moments That Matter"</li>
-                        <li>"Feeling Immersed, Connected & Seen"</li>
-                        <li>"New Growth & Purpose"</li>
-                    </ul>
-                </p>
+                <!-- Key Insights Section -->
+                <h2>Key Insights</h2>
+                <p>Our analysis revealed several critical patterns in LA's crime landscape:</p>
 
-                <div class="image main"><img src="images/goals.jpg" alt="Goals Illustration" /></div>
-
-                <!-- Actions Section -->
-                <h2>Actions</h2>
+                <h3>Top 5 Most Common Crimes</h3>
                 <p>
-                    Originally, the organizers wanted to use LLMs to “read” the survey responses and give the grief stage. My team and I went through multiple iterations such as prompt engineering, chain prompting, and creating AI agents. The original API key given to access LLMs did not allow training AI agents, which quickly proved ineffective as soon as the survey responses were looped. Labels were biased toward stages 3 and 5, resulting in an F1 score of 6%.
+                    The most prevalent crimes in LA County were:
                 </p>
-                <p>
-                    Changing the prompt multiple times and implementing chain prompting using different models increased the score to 46%. However, this was still unsatisfactory. We trained an agent using Mistral AI and the example results from the 50-line dataset, reaching a score of 76.7%.
-                </p>
+                <ul>
+                    <li>Vehicle Theft</li>
+                    <li>Battery</li>
+                    <li>Identity Theft</li>
+                    <li>Vehicle Burglary</li>
+                    <li>Vandalism</li>
+                </ul>
 
-                <div class="image main"><img src="images/iterations.jpg" alt="Iterations" /></div>
-
+                <h3>Geographic Hotspots</h3>
                 <p>
-                    We returned to the PredictionGuard API key and explored multiple LLMs. A hybrid method was developed: one LLM summarized survey responses using Llama 3.2, while three other models used this summary along with the labeled dataset. Despite this, the score peaked at 67.7%.
+                    Three areas emerged as particular concerns:
                 </p>
-                <p>
-                    Shifting to regression models yielded an F1 score of 80.7%. We manually added training rows from Mistral AI’s submissions and utilized open-ended question data, boosting the score to 89%. By refining data through translation, vectorization, and disagreement analysis between logistic regression and random forest models, we achieved 96.1%, securing first place by a significant margin.
-                </p>
+                <ul>
+                    <li>Central (Downtown LA) - High concentration of various crime types</li>
+                    <li>77th Street (South LA) - Significant violent crime reports</li>
+                    <li>Pacific (Venice Beach) - Notable tourist-targeted crimes</li>
+                </ul>
 
-                <div class="image main"><img src="images/results.jpg" alt="Results Chart" /></div>
+                <div class="image main"><img src="images/Map.png" alt="Crime Statistics Chart" /></div>
+
+                <h3>Demographic Patterns</h3>
+                <p>
+                    Our victim demographic analysis showed:
+                </p>
+                <ul>
+                    <li>35% Black victims</li>
+                    <li>24% Hispanic/Latino/Mexican victims</li>
+                    <li>16% White victims</li>
+                </ul>
+
+                <div class="image main"><img src="images/CrimeDistribution.png" alt="Crime Statistics Chart" /></div>
+
+                <h2>Unusual Findings</h2>
+                <p>
+                    Our investigation uncovered some remarkable cases, including:
+                </p>
+                <ul>
+                    <li>A robbery involving a bow and arrow</li>
+                    <li>15 incidents with brick/concrete blocks as weapons</li>
+                    <li>4 sword-related crimes</li>
+                    <li>10 cases involving disguised perpetrators</li>
+                    <li>136 boat thefts</li>
+                    <li>22 incidents of laser-pointing at aircraft</li>
+                </ul>
+
+                <h2>Strategic Recommendations</h2>
+                <p>Based on our analysis, we recommend:</p>
+
+                <h3>For Law Enforcement</h3>
+                <ul>
+                    <li>
+                        Create specialized units focused on the most prevalent crime types to improve overall case handling efficiency and perform further investigation to prevent crime.
+                    </li>
+                    <li>Increase armed police presence during peak months (July, August, October)</li>
+                    <li>Work with the government to modify environments in high-crime areas (e.g., improve lighting, remove obstructions, and install CCTVs).</li>
+                    <li>Deploy additional resources to identified crime hotspots</li>
+                </ul>
+
+                <h3>For the Public</h3>
+                <ul>
+                    <li>Inform citizens about high-crime areas so they can take extra precautions or avoid these locations.</li>
+                    <li>Broken windows theory: Encourage community clean-up can deter crime through environmental improvements.</li>
+                    <li>Education Programs: Inform citizens about the most common crimes and how to protect themselves (e.g., home security tips and free self-defence classes).</li>
+
+                </ul>
+
             </section>
 
         </div>
