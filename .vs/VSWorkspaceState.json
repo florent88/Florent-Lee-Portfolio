@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\assets",
+    "\\assets\\css",
+    "\\assets\\sass",
     "\\documents",
     "\\videos"
   ],
-  "SelectedNode": "\\documents\\Plan_Memoire_IA.pdf",
+  "SelectedNode": "\\elements.html",
   "PreviewInSolutionExplorer": false
 }
