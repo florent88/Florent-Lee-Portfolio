@@ -45,12 +45,12 @@
 					<li><a href="elements.html">Education and Work Experience</a></li>
 				</ul>
 				<!--<ul class="icons">
-			<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-			<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-			<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-			<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-		</ul>
-		-->
+				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+			</ul>
+			-->
 			</nav>
 
 			<!-- Main -->
@@ -85,7 +85,8 @@
 							<h2><a href="Entrepreneur.html">Entrepreneurial Project</a></h2>
 						</header>
 						<a href="Entrepreneur.html">
-							<video class="hover-video" src="videos/OutfitMe.mp4" muted loop playsinline autoplay></video>						</a>
+							<video class="hover-video" src="videos/OutfitMe.mp4" muted loop playsinline></video>
+						</a>
 						<p>How my team and I bounced back from a chaotic team project and got top grades.</p>
 						<ul class="actions special">
 							<li><a href="Entrepreneur.html" class="button">Full Story</a></li>
@@ -132,7 +133,7 @@
 							<li><a href="LA_Crime.html" class="button">Full Story</a></li>
 						</ul>
 					</article>
-					
+
 					<article>
 						<header>
 							<span class="date">March 8, 2025</span>
@@ -171,25 +172,25 @@
 						</ul>
 					</article>
 				</section>
-					
+
 
 				<!-- Footer -->
-					<!--
-				<footer>
-					<div class="pagination">
-						<!--<a href="#" class="previous">Prev</a>-->
-					<!--
-						<a href="#" class="page active">1</a>
-						<a href="#" class="page">2</a>
-						<a href="#" class="page">3</a>
-						<span class="extra">&hellip;</span>
-						<a href="#" class="page">8</a>
-						<a href="#" class="page">9</a>
-						<a href="#" class="page">10</a>
-						<a href="#" class="next">Next</a>
-					</div>
-				</footer>
-					-->
+				<!--
+			<footer>
+				<div class="pagination">
+					<!--<a href="#" class="previous">Prev</a>-->
+				<!--
+					<a href="#" class="page active">1</a>
+					<a href="#" class="page">2</a>
+					<a href="#" class="page">3</a>
+					<span class="extra">&hellip;</span>
+					<a href="#" class="page">8</a>
+					<a href="#" class="page">9</a>
+					<a href="#" class="page">10</a>
+					<a href="#" class="next">Next</a>
+				</div>
+			</footer>
+				-->
 
 			</div>
 
@@ -246,24 +247,25 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script>
-				document.querySelectorAll('.hover-video').forEach(video => {
-					video.addEventListener('mouseenter', () => {
-						video.play();
-					});
-					video.addEventListener('mouseleave', () => {
-						video.pause();
-						video.currentTime = 0; // Reset video to the beginning
-					});
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+			document.querySelectorAll('.hover-video').forEach(video => {
+				video.addEventListener('mouseenter', () => {
+					video.play();
 				});
-			</script>
+				video.addEventListener('mouseleave', () => {
+					video.pause();
+					video.currentTime = 0; // Reset video to the beginning
+				});
+			});
+		</script>
+
 
 	</body>
 </html>

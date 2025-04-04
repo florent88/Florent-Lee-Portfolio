@@ -53,11 +53,10 @@ blockquote, q {
 	transition: opacity 0.3s ease; /* Smooth hover effect (optional) */
 }
 
-	.hover-video:hover {
-		/* Play the video when hovered */
-		animation-play-state: running;
-		opacity: 0.9; /* Slight effect to indicate interaction */
-	}
+.hover-video:hover {
+	/* Play the video when hovered */
+	opacity: 0.9; /* Slight effect to indicate interaction */
+}
 
 .hover-video:not(:hover) {
 	/* Pause the video when not hovered */
